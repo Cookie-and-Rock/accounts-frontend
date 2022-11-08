@@ -41,20 +41,6 @@ Using Docker:
 - Then build with `docker build -t account-candr .`
 - Then run with `docker run -p 3000:3000 account-candr`
 
-**IMPORTANT**
-
-The Docker implementation uses a NextJs feature called `standalone` found in `next.config.js`. `standalone` allows for a small and only essential packages to be loaded and servable via `node server.js`. Unfortunately, it seems that `standalone` doesn't account for pages in the new NextJS `/app` directory. So all pages in the old `/pages` work but no pages in the `/app` work after deployment.
-
-Test this yourself. Using `npm run build` and `npn run start` can use both `/pages` and `/app` but using `docker build...` and `docker run...` all `/app` pages are 404.
-
-To fix this I added a line in the Dockerfile:
-
-    COPY --from=builder --chown=nextjs:nodejs /app/.next/server ./.next/server
-
-This makes sure that the `/server` dir, which I believe contains the new `/app` pages to be served as well. This solution is only a hack since it likely isn't using the optimized `standalone` feature which builds a minimal and essentials-only build. Since NextJS13 is relatively new, I couldn't find any good support or solutions to this problem.
-
-I believe this solution is better than serving a whole `.next` dir but I'll see how far the millage takes me.
-
 ## Production
 
 This should be run in a docker environment alongside other microservices.
