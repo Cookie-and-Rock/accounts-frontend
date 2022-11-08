@@ -3,6 +3,11 @@
 export default function Page() {
 
   return (
-    <div></div>
+    <div>
+      <p>
+        Something here is something great innt?
+        REALLYLONGTEXTICANFIND
+      </p>
+    </div>
   );
 }

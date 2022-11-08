@@ -1,7 +1,7 @@
 {
   "name": "accounts-candr",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.0-beta",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
