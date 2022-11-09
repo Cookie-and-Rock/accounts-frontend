@@ -1,0 +1,12 @@
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+
+  padding: 0;
+  width: 100%;
+}
+
+.footer li {
+  list-style: none;
+}

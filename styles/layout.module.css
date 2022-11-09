@@ -1,0 +1,49 @@
+div.layout {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout main {
+  padding: 4rem 3.8rem 3.8rem 3rem;
+  height: fit-content;
+  overflow:visible
+}
+
+.layout Footer {
+  padding-left: 3.8rem;
+  padding-right: 3.8rem;
+}
+
+@media only screen and (min-width: 600px) {
+
+  div.layout {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .layout main {
+    width: 500px;
+    height: fit-content;
+    overflow: visible;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    flex: 0;
+  }
+
+  .layout Footer {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+
+  .layout {
+    height: 650px;
+    margin-top: 25px;
+  }
+
+  div.layout {
+    justify-content: start;
+  }
+}

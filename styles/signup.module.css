@@ -1,16 +1,16 @@
-div.login {  
+div.signup {  
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.login {
-  text-align: center;
 }
 
 div.createAccountLogin {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.MuiTextField-root {
   padding-top: 2rem;
 }
