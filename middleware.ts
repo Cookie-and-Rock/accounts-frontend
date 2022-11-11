@@ -27,6 +27,7 @@ export function middleware(request: NextRequest) {
 
   const sessionID = request.cookies.get('session')?.value ?? "";
   // TODO: Sanitize!
+  // TODO: Bug where if path of cookie is set to e.g "/signin" and session=valid; then there is unlimited loop.
 
   // If user is signed in
   const userSignedIn = sessionID == "valid";
