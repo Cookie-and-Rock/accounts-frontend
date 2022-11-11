@@ -23,7 +23,7 @@ const Page: NextPageWithLayout = () => {
       <Typography variant="body1" gutterBottom style={{
         paddingTop: "3rem",
       }}>
-        Should redirect from this page.
+        Should not linger on this page.
       </Typography>
     </div>
   );
